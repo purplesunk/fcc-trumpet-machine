@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ------------  
+     Layouts 
+--------------*/
+body {
+    font-family: Roboto;
+    background-color: #545E75;
+}
+
+img {
+    display: none;
+}
+
+.pad {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 0.4em;
+    width: 100%;
+    padding: 0.5em;
+}
+
+#info {
+    color: white;
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    color: white;
+    font-size: .75rem;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #49A078;
+}
+
+@media only screen and (min-height: 430px) {
+    img {
+        display: block;
+        margin: auto;
+        height: calc(100vh - 430px);
+    }
+}
+
+@media only screen and (min-width: 425px) {
+body {
+    background-color: #fcbf49;
+    background-image: url("../images/trumpet.png");
+}
+
+#drum-machine {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #545E75;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0.75em;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px black;
+}
+
+#info {
+    margin-left: 0.4em;
+}
+
+.footer {
+    color: blue;
+}
+
+img {
+    display: none;
+}
+
+}
+
+/* ------------  
+     Buttons
+--------------*/
+
+.drum-pad, #display {
+    background-color: #96ACB7;
+    color: #eae2b7;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px black;
+}
+
+.drum-pad {
+    padding: 1em;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+#display {
+    display: block;
+    width: 100%;
+    padding: 0.5em 0;
+    height: 2.5em;
+    margin-top: 0.4em;
+}

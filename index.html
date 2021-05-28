@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Trumpet Machine</title>
+
+
+        <link rel="stylesheet" href="./css/style.css"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+
+        <script src="js/main.js"></script>
+    </head>
+    <body onload="addAudioId()">
+        <img src="./images/trumpet.png"/>
+        <div id="drum-machine">
+            <div id="info">
+                <p>Note Played: </p>
+                <p id="display"></p>
+            </div>
+            <div class="pad">
+                <button id="trumpet-C" class="drum-pad" onclick="playAudio(id)">
+                    Q<audio class="clip" src="sounds/C.mp3"></audio>
+                </button>
+                <button id="trumpet-D" class="drum-pad" onclick="playAudio(id)">
+                    W<audio class="clip" src="sounds/D.mp3"></a"dio>
+                </button>
+                <button id="trumpet-E" class="drum-pad" onclick="playAudio(id)">
+                    E<audio class="clip" src="sounds/E.mp3"></audio>
+                </button>
+                <button id="trumpet-F" class="drum-pad" onclick="playAudio(id)">
+                    A<audio class="clip" src="sounds/F.mp3"></audio>
+                </button>
+                <button id="trumpet-G" class="drum-pad" onclick="playAudio(id)">
+                    S<audio class="clip" src="sounds/G.mp3"></audio>
+                </button>
+                <button id="trumpet-A" class="drum-pad" onclick="playAudio(id)">
+                    D<audio class="clip" src="sounds/A.mp3"></audio>
+                </button>
+                <button id="trumpet-B" class="drum-pad" onclick="playAudio(id)">
+                    Z<audio class="clip" src="sounds/B.mp3"></audio>
+                </button>
+                <button id="trumpet-C8" class="drum-pad" onclick="playAudio(id)">
+                    X<audio class="clip" src="sounds/C8+.mp3"></audio>
+                </button>
+                <button id="trumpet-D8" class="drum-pad" onclick="playAudio(id)">
+                    C<audio class="clip" src="sounds/D8+.mp3"></audio>
+                </button>
+            </div>
+        </div>
+        <p class="footer"><em>Trumpet sounds are from this <a href="https://www.youtube.com/watch?v=KlpsM8zsqJM" target="_blank">video</a>.</em></p>
+    </body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
