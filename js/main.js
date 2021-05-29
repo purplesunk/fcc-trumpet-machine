@@ -1,3 +1,25 @@
+
+// change volume
+
+function changeVolume(number) {
+    const audioClips = [...document.getElementsByClassName("clip")];
+
+    audioClips.forEach(element => {
+        element.volume = number;
+    });
+}
+
+// the range input and the volume
+
+function showVolValue(value) {
+    let volume = document.getElementById("volume");
+
+    volume.innerText = value;
+
+    changeVolume(value / 100);
+}
+
+
 // html formating meibi?
 
 const colors = ["80ff72","e58c8a","7ee8fa","0a369d","7a5c58","007c77","89023e","1c77c3","b80c09","6184d8"];
@@ -19,6 +41,7 @@ function addAudioId() {
         audioClips[i].innerText = buttons[i].id;
     }
 
+    changeVolume(0.4);
 }
 
 // display the note you are playing

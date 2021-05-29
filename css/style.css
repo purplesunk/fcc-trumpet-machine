@@ -37,7 +37,18 @@ img {
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap;
-    text-shadow: 2px 2px 2px black;
+    text-shadow: 1px 1px 1px black;
+}
+
+#volume {
+    display: none;
+    width: 20%;
+    margin-bottom: 0.4em;
+}
+
+.vol-text {
+    display: none;
+    margin-top: 2em;
 }
 
 .footer {
@@ -55,11 +66,11 @@ img {
     color: #49A078;
 }
 
-@media only screen and (min-height: 530px) {
+@media only screen and (min-height: 540px) {
     img {
         display: block;
         margin: auto;
-        height: calc(100vh - 530px);
+        height: calc(100vh - 540px);
     }
 }
 
@@ -81,7 +92,7 @@ body {
     padding: 0.75em;
     border: 1px solid black;
     border-radius: 3px;
-    box-shadow: 3px 3px 10px black;
+    box-shadow: 3px 3px 10px #383636;
     max-width: 40em;
     width: 100%;
 }
@@ -99,16 +110,25 @@ img {
     display: none;
 }
 
+#volume {
+    display: block;
+}
+
+.vol-text {
+    display: block;
+}
+
 }
 
 /* ------------  
      Buttons
 --------------*/
 
-.drum-pad, #display {
+.drum-pad, #display, #volume {
     border: 1px solid black;
     border-radius: 3px;
-    box-shadow: 2px 2px 3px black;
+    box-shadow: 2px 2px 3px #383636;
+    text-shadow: none;
 }
 
 .drum-pad {
@@ -118,13 +138,22 @@ img {
     text-decoration: none;
 }
 
-#display {
+#display, #volume {
     background-color: white;
     color: #383636;
-    display: block;
-    width: 80%;
     padding: 0.5em 0;
-    height: 2.5em;
+    height: 2.4em;
     margin: 0 auto;
     margin-top: 0.4em;
+}
+
+#display {
+    display: block;
+    width: 80%;
+}
+
+#vol-slider {
+  width: 80%;
+  margin-top: 13.8px;
+  background-color: transparent;
 }

@@ -18,6 +18,9 @@
             <div id="info">
                 <p class="note-played">Note Played: </p>
                 <p id="display"></p>
+                <p class="vol-text">Volume:</p>
+                <p id="volume">40</p>
+                <input type="range" id="vol-slider" value="40" min="0" max="100" onchange="showVolValue(value)">
             </div>
             <div class="pad">
                 <button id="trumpet-C" class="drum-pad" onclick="playAudio(id)">
