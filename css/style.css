@@ -16,7 +16,6 @@ body {
   line-height: 1.5;
   text-align: center;
   min-height: 100vh;
-  height: 100%;
   max-width: 46em;
   margin: 0 auto;
 }
@@ -26,8 +25,9 @@ a {
 }
 
 .title {
-  margin-top: 1.125em;
+  padding-top: 1em;
 }
+
 
 /* -------------- 
  Grid Pad Layout
