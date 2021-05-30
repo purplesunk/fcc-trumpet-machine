@@ -1,160 +1,97 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik:700&display=swap");
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+*::before {
+  box-sizing: border-box;
+}
 
-/* ------------  
-     Layouts 
---------------*/
 body {
-    font-family: Roboto;
-    background-color: #40495e;
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  min-height: 100vh;
+  height: 100%;
+  max-width: 46em;
+  margin: 0 auto;
 }
 
-img {
-    display: none;
+a {
+  color: cornflowerblue;
 }
 
-.pad {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 1em;
-    width: 100%;
-    padding: 0.5em;
+.title {
+  margin-top: 3em;
+}
+
+/* -------------- 
+ Grid Pad Layout
+-----------------*/
+.grid-pad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  place-content: center;
+  grid-gap: 0.625em;
+  padding: 0.625em;
+  margin: 0 auto;
+  width: 80%;
+  height: 70vh;
+  border: .250em solid black;
 }
 
 #trumpet-E8 {
-    grid-column-start: 1;
-    grid-column-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 
+/* -------------- 
+   Info Display
+-----------------*/
 #info {
-    color: white;
-    width: 100%;
-    font-size: 1.1rem;
-    padding: 1em;
-    text-align: center;
-    text-transform: uppercase;
-    white-space: nowrap;
-    text-shadow: 1px 1px 1px black;
+  padding: 0.625em;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-#volume {
-    display: none;
-    width: 20%;
-    margin-bottom: 0.4em;
+#info p {
+  display: inline-block;
+  white-space: nowrap;
 }
 
-.vol-text {
-    display: none;
-    margin-top: 2em;
+.display-note {
+  width: 4em;
 }
 
-.footer {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    white-space: nowrap;
-    transform: translateX(-50%);
-    color: white;
-    font-size: .75rem;
-}
-
-.footer a {
-    text-decoration: none;
-    color: #49A078;
-}
-
-@media only screen and (min-height: 540px) {
-    img {
-        display: block;
-        margin: auto;
-        height: calc(100vh - 540px);
-    }
-}
-
-@media only screen and (min-width: 425px) {
-body {
-    background-color: #D2A448;
-    background-image: url("../images/trumpet.png");
-}
-
-#drum-machine {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #40495e;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    padding: 0.75em;
-    border: 1px solid black;
-    border-radius: 3px;
-    box-shadow: 3px 3px 10px #383636;
-    max-width: 40em;
-    width: 100%;
-}
-
-#info {
-    margin: auto 0;
-    margin-left: 0.4em;
-}
-
-.footer {
-    color: blue;
-}
-
-img {
-    display: none;
-}
-
-#volume {
-    display: block;
-}
-
-.vol-text {
-    display: block;
-}
-
+#vol-slider {
+  display: block;
 }
 
 /* ------------  
      Buttons
 --------------*/
-
-.drum-pad, #display, #volume {
-    border: 1px solid black;
-    border-radius: 3px;
-    box-shadow: 2px 2px 3px #383636;
-    text-shadow: none;
+  
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
 }
 
-.drum-pad {
-    color: white;
-    padding: 1em;
-    font-size: 1.5rem;
-    text-decoration: none;
+button:active {
+  background-color: cornflowerblue;
 }
 
-#display, #volume {
-    background-color: white;
-    color: #383636;
-    padding: 0.5em 0;
-    height: 2.4em;
-    margin: 0 auto;
-    margin-top: 0.4em;
-}
-
-#display {
-    display: block;
-    width: 80%;
-}
-
-#vol-slider {
-  width: 80%;
-  margin-top: 13.8px;
-  background-color: transparent;
-}
