@@ -6,55 +6,48 @@
         <title>Trumpet Machine</title>
 
 
+        <script src="js/main.js" async></script>
         <link rel="stylesheet" href="./css/style.css"/>
-
-        <script src="js/main.js"></script>
     </head>
-    <body onload="addAudioId()">
+    <body onload="changeVolume(40)">
+        <h1 class="title">Trumpet Machine</h1>
         <div id="drum-machine">
-            <h1 class="title">Trumpet Machine</h1>
             <div id="info">
-                <div class="display-note">
-                    <p>Note Played: </p>
-                    <p id="display"></p>
-                </div>
-                <div>
-                    <p>Volume:</p>
-                    <p id="volume">40</p>
-                    <input type="range" id="vol-slider" value="40" min="0" max="100" onchange="showVolValue(value)">
-                </div>
+                    <div id="display"></div>
+                    <input type="range" class="volume" name="volume" value="40" min="0" max="100" onchange="changeVolume(this.value)" />
+                    <label class="label" for="volume">Volume</label>
             </div>
-            <div class="grid-pad">
-                <button id="trumpet-C" class="drum-pad" onclick="playAudio(innerText)">
-                    Q<audio class="clip" src="sounds/C.mp3"></audio>
+            <div class="keypad">
+                <button id="trumpet-C" class="drum-pad" onclick="playAudio(this.firstElementChild)">Q
+                    <audio id="Q" class="clip" src="./sounds/C.mp3">trumpet-C</audio>
                 </button>
-                <button id="trumpet-D" class="drum-pad" onclick="playAudio(innerText)">
-                    W<audio class="clip" src="sounds/D.mp3"></a"dio>
+                <button id="trumpet-D" class="drum-pad" onclick="playAudio(this.firstElementChild)">W
+                    <audio id="W" class="clip" src="./sounds/D.mp3">trumpet-D</audio>
                 </button>
-                <button id="trumpet-E" class="drum-pad" onclick="playAudio(innerText)">
-                    E<audio class="clip" src="sounds/E.mp3"></audio>
+                <button id="trumpet-E" class="drum-pad" onclick="playAudio(this.firstElementChild)">E
+                    <audio id="E" class="clip" src="./sounds/E.mp3">trumpet-E</audio>
                 </button>
-                <button id="trumpet-F" class="drum-pad" onclick="playAudio(innerText)">
-                    A<audio class="clip" src="sounds/F.mp3"></audio>
+                <button id="trumpet-F" class="drum-pad" onclick="playAudio(this.firstElementChild)">A
+                    <audio id="A" class="clip" src="./sounds/F.mp3">trumpet-F</audio>
                 </button>
-                <button id="trumpet-G" class="drum-pad" onclick="playAudio(innerText)">
-                    S<audio class="clip" src="sounds/G.mp3"></audio>
+                <button id="trumpet-G" class="drum-pad" onclick="playAudio(this.firstElementChild)">S
+                    <audio id="S" class="clip" src="./sounds/G.mp3">trumpet-G</audio>
                 </button>
-                <button id="trumpet-A" class="drum-pad" onclick="playAudio(innerText)">
-                    D<audio class="clip" src="sounds/A.mp3"></audio>
+                <button id="trumpet-A" class="drum-pad" onclick="playAudio(this.firstElementChild)">D
+                    <audio id="D" class="clip" src="./sounds/A.mp3">trumpet-A</audio>
                 </button>
-                <button id="trumpet-B" class="drum-pad" onclick="playAudio(innerText)">
-                    Z<audio class="clip" src="sounds/B.mp3"></audio>
+                <button id="trumpet-B" class="drum-pad" onclick="playAudio(this.firstElementChild)">Z
+                    <audio id="Z" class="clip" src="./sounds/B.mp3">trumpet-B</audio>
                 </button>
-                <button id="trumpet-C8" class="drum-pad" onclick="playAudio(innerText)">
-                    X<audio class="clip" src="sounds/C8+.mp3"></audio>
+                <button id="trumpet-C8" class="drum-pad" onclick="playAudio(this.firstElementChild)">X
+                    <audio id="X" class="clip" src="./sounds/C8.mp3">trumpet-C8</audio>
                 </button>
-                <button id="trumpet-D8" class="drum-pad" onclick="playAudio(innerText)">
-                    C<audio class="clip" src="sounds/D8+.mp3"></audio>
+                <button id="trumpet-D8" class="drum-pad" onclick="playAudio(this.firstElementChild)">C
+                    <audio id="C" class="clip" src="./sounds/D8.mp3">trumpet-D8</audio>
                 </button>
-                <button id="trumpet-E8" class="drum-pad" onclick="playAudio(innerText)">
-                    V<audio class="clip" src="sounds/E8+.mp3"></audio>
-                </button>
+                <!-- <button id="trumpet-E8" class="drum-pad" onclick="playAudio(this.firstChildElement)">V
+                    <audio id="V" class="clip" src="./sounds/E8.mp3">trumpet-E8</audio>
+                </button> -->
             </div>
         </div>
         <p class="footer">Trumpet sounds are from this <a href="https://www.youtube.com/watch?v=KlpsM8zsqJM" target="_blank">video</a>.</p>
