@@ -1,31 +1,37 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
+  align-items: space-between;
+  background-color: #5464B6;
+  display: flex;
+  flex-direction: column;
   font-family: "Rubik", sans-serif;
   font-size: 1rem;
-  min-height: 100vh;
-  display: flex;
   justify-content: center;
-  align-items: space-between;
-  flex-direction: column;
-  background-color: #A299FF;
+  min-height: 100vh;
 }
 
 .title {
-  background-color: #7C70FF;
+  background-color: #3D4B8F;
   box-shadow: 0 .0125em .625em #0D0C1D;
+  color: #F8F0FB;
   padding: .625em;
   text-align: center;
-  color: #F8F0FB;
 }
 
 .footer {
-  text-align: center;
+  color: #F8F0FB;
   font-size: .8rem;
+  text-align: center;
+}
+
+.footer > a {
+    color: #FF7F51;
+    text-decoration: none;
 }
 
 
@@ -34,25 +40,25 @@ body {
 -----------------*/
 #drum-machine {
   width: 18.25em;
+  background-color: #2B3045;
   box-shadow: .125em .125em .625em #0D0C1D;
   border-radius: 8px;
-  background-color: #495AAB;
   margin: auto auto;
   padding: 0.325em;
 }
 
 .keypad {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 0.225em;
-  overflow: hidden;
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
+  display: grid;
+  grid-gap: 0.225em;
+  grid-template-columns: repeat(3, 1fr);
+  overflow: hidden;
 }
 
 #trumpet-E8 {
-  grid-column-start: 1;
   grid-column-end: 4;
+  grid-column-start: 1;
 }
 
 /* -------------- 
@@ -60,24 +66,24 @@ body {
 -----------------*/
 
 #info {
-  padding: 0.625em;
-  text-align: center;
   background-color: #161B33;
-  text-transform: uppercase;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   color: #F8F0FB;
   display: flex;
   flex-direction: column-reverse;
-  margin-bottom: .225em;
   font-weight: bold;
   justify-content: space-around;
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
+  margin-bottom: .225em;
+  padding: 0.625em;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 #display {
-  padding: .625em .625em;
-  min-height: 2.5em;
   flex-grow: 1;
+  min-height: 2.5em;
+  padding: .625em .625em;
 }
 
 /* ------------  
@@ -85,10 +91,10 @@ body {
 --------------*/
   
 button {
+  background-color: #5C5F72;
   border: 0;
-  padding: 1em .725em;
-  background-color: #6271BC;
   color: #F8F0FB;
+  padding: 1em .725em;
 }
 
 button:active {
