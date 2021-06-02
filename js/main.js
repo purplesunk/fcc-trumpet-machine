@@ -1,17 +1,9 @@
-// Variables
-
-const volume = document.querySelector(".volume")
-const display = document.getElementById("display")
-const keypad = document.querySelector(".keypad")
-
-const audioClips = [...keypad.querySelectorAll(".clip")]
-
-let sound = ""
-
 
 // Volumen changing
 
 function changeVolume(number) {
+const keypad = document.querySelector(".keypad")
+const audioClips = [...keypad.querySelectorAll(".clip")]
     audioClips.forEach(element => {
         element.volume = number / 100
     });
@@ -19,7 +11,11 @@ function changeVolume(number) {
 
 // Listening to clicks and keypresses
 
+let sound = ""
 const playAudio = (audio) => {
+
+const display = document.getElementById("display")
+
     if (sound) {
     sound.pause()
     sound.currentTime = 0
