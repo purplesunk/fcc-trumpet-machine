@@ -17,7 +17,7 @@ body {
 
 .title {
   background-color: #3D4B8F;
-  box-shadow: 0 .0125em .625em #0D0C1D;
+  box-shadow: 0 .0125em .625em rgba(0, 0, 0, 0.2);
   color: #F8F0FB;
   padding: .625em;
   text-align: center;
@@ -41,7 +41,7 @@ body {
 #drum-machine {
   width: 18.25em;
   background-color: #2B3045;
-  box-shadow: .125em .125em .625em #0D0C1D;
+  box-shadow: .125em .125em .625em rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   margin: auto auto;
   padding: 0.325em;
